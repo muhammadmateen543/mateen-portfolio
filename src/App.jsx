@@ -122,13 +122,26 @@ export default function App() {
             </div>
             {/* Resume button here */}
             <a
-              href="/resume.pdf"
-              download
-              className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-indigo-500 to-fuchsia-500 px-4 py-2 text-white shadow hover:opacity-90 transition"
-            >
-              <FileDown className="h-5 w-5" />
-              Resume
-            </a>
+  href="/resume.pdf"
+  onClick={(e) => {
+    e.preventDefault();
+    fetch("/resume.pdf")
+      .then((res) => res.blob())
+      .then((blob) => {
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "resume.pdf"; // downloaded filename
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+      });
+  }}
+>
+  <FileDown className="h-5 w-5" />
+  Resume
+</a>
+
           </div>
         </div>
       </nav>
