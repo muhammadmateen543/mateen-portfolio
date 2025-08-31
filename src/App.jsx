@@ -122,25 +122,15 @@ export default function App() {
             </div>
             {/* Resume button here */}
             <a
-  href="/resume.pdf"
-  onClick={(e) => {
-    e.preventDefault();
-    fetch("/resume.pdf")
-      .then((res) => res.blob())
-      .then((blob) => {
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = "resume.pdf"; // downloaded filename
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
-      });
-  }}
+  href="https://muhammadmateen543.github.io/mateen-portfolio/resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-2"
 >
   <FileDown className="h-5 w-5" />
   Resume
 </a>
+
 
           </div>
         </div>
