@@ -4,6 +4,7 @@ import { Mail, Linkedin, Github, FileDown } from "lucide-react";
 import Tilt from "react-parallax-tilt";
 import { TypeAnimation } from "react-type-animation";
 import Marquee from "react-fast-marquee";
+import profilePic from './assets/profile.jpeg';
 
 export default function App() {
   // ------- SCROLL PROGRESS -------
@@ -175,7 +176,7 @@ export default function App() {
             <div className="relative">
               <div className="absolute -inset-1 rounded-full bg-[conic-gradient(var(--tw-gradient-stops))] from-indigo-500 via-fuchsia-500 to-pink-500 blur opacity-40" />
               <img
-                src="/profile.jpeg"
+                src={profilePic}
                 alt="Muhammad Mateen"
                 className="relative h-80 w-80 rounded-full object-cover shadow-2xl ring-8 ring-white"
               />
