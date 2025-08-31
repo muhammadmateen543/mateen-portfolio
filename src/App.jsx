@@ -122,7 +122,7 @@ export default function App() {
             </div>
             {/* Resume button here */}
             <a
-              href="/MuhammadMateen-Resume.pdf"
+              href="/resume.pdf"
               download
               className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-indigo-500 to-fuchsia-500 px-4 py-2 text-white shadow hover:opacity-90 transition"
             >
