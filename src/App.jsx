@@ -5,7 +5,6 @@ import Tilt from "react-parallax-tilt";
 import { TypeAnimation } from "react-type-animation";
 import Marquee from "react-fast-marquee";
 import profilePic from './assets/profile.jpeg';
-import resumePdf from './assets/Muhammad Mateen - Resume.pdf';
 
 export default function App() {
   // ------- SCROLL PROGRESS -------
@@ -123,7 +122,7 @@ export default function App() {
             </div>
             {/* Resume button here */}
             <a
-              href={resumePdf}
+              href="/Muhammad Mateen - Resume.pdf"
               download
               className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-indigo-500 to-fuchsia-500 px-4 py-2 text-white shadow hover:opacity-90 transition"
             >
